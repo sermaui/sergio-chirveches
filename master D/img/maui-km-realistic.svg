@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081022"/>
+      <stop offset="40%" stop-color="#12386e"/>
+      <stop offset="100%" stop-color="#0f2e6e"/>
+    </linearGradient>
+    <radialGradient id="spot1" cx="25%" cy="10%" r="0.5">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="spot2" cx="75%" cy="10%" r="0.5">
+      <stop offset="0%" stop-color="rgba(255,220,180,0.9)"/>
+      <stop offset="100%" stop-color="rgba(255,220,180,0)"/>
+    </radialGradient>
+    <linearGradient id="logoGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffdc6b"/>
+      <stop offset="100%" stop-color="#ff6de6"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="520" fill="url(#bg)" />
+
+  <ellipse cx="700" cy="470" rx="620" ry="80" fill="rgba(0,0,0,0.2)" />
+  <ellipse cx="700" cy="470" rx="500" ry="50" fill="rgba(255,255,255,0.08)" />
+
+  <circle cx="350" cy="90" r="150" fill="url(#spot1)" opacity="0.45" />
+  <circle cx="1050" cy="90" r="170" fill="url(#spot2)" opacity="0.45" />
+
+  <g opacity="0.85">
+    <rect x="80" y="150" width="130" height="240" rx="22" fill="#161c2f" />
+    <circle cx="145" cy="220" r="40" fill="#f3cd48" />
+    <circle cx="145" cy="310" r="58" fill="#ffda73" />
+    <rect x="1180" y="150" width="130" height="240" rx="22" fill="#161c2f" />
+    <circle cx="1245" cy="220" r="40" fill="#f3cd48" />
+    <circle cx="1245" cy="310" r="58" fill="#ffda73" />
+  </g>
+
+  <path d="M850,400 Q880,310 860,220" stroke="#e0e8ff" stroke-width="12" fill="none" opacity="0.35" />
+  <path d="M900,100 C890,210 900,280 920,340" stroke="#f7faff" stroke-width="10" fill="none" opacity="0.4" />
+
+  <g transform="translate(420,120)">
+    <path d="M210,20 C220,-8 245,-12 270,12 C280,22 284,40 270,54 C234,85 214,95 180,90 C120,82 64,58 30,32 C14,16 6,-12 16,-28 C22,-42 42,-50 60,-44 C78,-38 90,-24 102,-16" fill="#232634" />
+    <path d="M50,48 C26,88 40,140 90,160 C110,170 128,172 150,168 C170,164 188,154 204,138 C218,124 226,104 226,86 C226,62 214,42 190,32 C140,12 80,18 50,48 Z" fill="#e5c6a4" />
+    <path d="M82,74 C80,60 80,46 90,40 C100,34 122,34 132,42 C142,50 138,74 136,86 C132,110 123,126 108,138 C92,150 74,146 64,134 C52,120 60,92 68,82 Z" fill="#1c1f2a" />
+    <path d="M68,82 C76,110 96,118 118,114 C136,110 146,86 140,66 C136,52 128,44 118,46 C108,48 92,56 88,66 C84,76 76,82 68,82 Z" fill="#f2d7c9" />
+    <path d="M72,88 C76,84 86,82 96,84" stroke="#1f2026" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M118,88 C122,84 132,82 142,84" stroke="#1f2026" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M92,118 C98,122 108,122 114,118" stroke="#3a1f15" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M100,124 C102,132 104,140 104,150 C104,156 98,162 92,162 C86,162 80,156 80,150 C80,140 82,132 86,124" fill="#481f0f" />
+    <circle cx="76" cy="92" r="8" fill="#1d1d24" />
+    <circle cx="124" cy="92" r="8" fill="#1d1d24" />
+    <circle cx="76" cy="92" r="3" fill="#ffffff" />
+    <circle cx="124" cy="92" r="3" fill="#ffffff" />
+    <path d="M62,136 C84,144 116,144 138,136" stroke="#2a1f1c" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M96,142 C100,154 104,164 104,174" stroke="#000" stroke-width="2" fill="none" opacity="0.3" />
+
+    <path d="M60,160 L160,160 L170,260 Q156,270 148,260 L148,210 Q146,200 140,190 Q134,180 128,175 L118,174 Q114,174 110,178 L98,184 Q84,188 70,184 L54,180 Q46,170 42,160 Z" fill="#111628" />
+    <path d="M64,168 Q76,160 88,162 Q102,166 118,172 Q134,178 148,180 Q150,190 146,198 Q138,210 128,216 Q116,220 104,218 Q94,216 82,210 Q72,200 64,190 Z" fill="#3f4b76" opacity="0.7" />
+    <path d="M76,168 C84,200 92,240 80,264 Q70,280 44,284 C20,288 6,276 8,248 Q10,214 26,186 C40,162 60,150 76,168 Z" fill="#1b233f" opacity="0.8" />
+    <path d="M136,168 C130,188 124,212 132,238 Q140,262 160,274 C172,282 188,278 190,250 C192,230 186,210 176,192 Q166,176 152,168 Z" fill="#1b233f" opacity="0.9" />
+
+    <path d="M198,110 L188,112 Q180,114 172,112 Q168,112 168,118 L168,142 Q170,150 174,154 Q178,158 184,160 Q188,162 192,160 Q198,156 204,144 Q208,132 206,118 Z" fill="#c2b39c" />
+    <path d="M198,110 C204,108 210,108 214,112 C218,116 218,122 214,126 L190,150 C186,154 180,154 176,150 L162,138 C158,134 158,128 162,124 C166,118 174,114 182,114 L190,112 Z" fill="#2a2a37" opacity="0.55" />
+
+    <rect x="164" y="118" width="14" height="54" rx="6" fill="#2b2f40" />
+    <rect x="178" y="116" width="24" height="58" rx="10" fill="#1f2538" />
+    <circle cx="186" cy="114" r="3" fill="#b3b3bd" />
+    <path d="M188,121 C190,124 190,128 188,131 L182,144 Q178,150 170,150 L166,148" stroke="#010101" stroke-width="2" fill="none" />
+
+    <path d="M204,148 C210,152 214,158 212,166 Q210,174 204,178 C198,182 190,180 186,172 Q182,164 186,156 C188,150 196,148 204,148 Z" fill="#272a3c" />
+
+    <path d="M160,232 C150,238 132,240 116,236 Q98,232 84,222 Q72,210 70,198 C68,188 72,180 82,174 Q92,168 104,168 H124 Q136,168 146,174 Q156,180 162,192 C168,204 172,218 168,232 Z" fill="#0f162c" opacity="0.85" />
+
+    <ellipse cx="202" cy="106" rx="18" ry="18" fill="#f4d8c0" opacity="0.7" />
+
+    <path d="M150,92 Q180,74 208,82" stroke="#ffd8bd" stroke-width="6" fill="none" opacity="0.5" />
+  </g>
+
+  <g transform="translate(160,380)">
+    <text x="0" y="0" font-family="Segoe UI, Arial, sans-serif" font-size="120" font-weight="800" fill="url(#logoGlow)" stroke="#120f16" stroke-width="3">KM</text>
+    <text x="0" y="96" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff" opacity="0.85">Karaoke Maui</text>
+  </g>
+
+  <g transform="translate(1080,430)">
+    <text x="0" y="0" font-family="Segoe UI, Arial, sans-serif" font-size="40" fill="#cff1ff" opacity="0.9">Vive la música, vive la noche</text>
+    <text x="0" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#b3d8ff" opacity="0.9">y deja que la pista te encuentre</text>
+  </g>
+</svg>
