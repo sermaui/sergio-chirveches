@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Título de la pestaña del navegador -->
+    <!-- Título en la pestaña del navegador -->
     <title>Karaoke Maui — Noche épica y sonido profesional</title>
 
-    <!-- Metadatos de Autoría y Descripción SEO (Para Google y buscadores) -->
+    <!-- Metadatos para SEO y autoría -->
     <meta name="author" content="Sergio Mauricio Chirveches">
-    <meta name="description" content="Karaoke Maui: Vive la música, vive la noche y deja que la pista te encuentre. Eventos, fiestas privadas y sonido profesional en Tenerife. Proyecto por Sergio Mauricio Chirveches.">
+    <meta name="description" content="Karaoke Maui: Vive la música, vive la noche y deja que la pista te encuentre. Eventos, fiestas privadas y sonido profesional en Tenerife. Proyecto por Sergio Mau[...]
 
-    <!-- Etiquetas Open Graph (Para la tarjeta que sale en WhatsApp, Facebook, LinkedIn...) -->
+    <!-- Open Graph para compartir en redes (WhatsApp, Facebook, LinkedIn) -->
     <meta property="og:site_name" content="Karaoke Maui">
     <meta property="og:title" content="Karaoke Maui · Proyecto de Sergio Mauricio Chirveches">
     <meta property="og:description" content="Noche épica, música en vivo y energía total. Descubre la mejor experiencia de karaoke con sonido profesional y ambiente premium.">
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://www.karaokemaui.com">
     <meta property="og:image" content="img/km%20hd.png">
 
-    <!-- Fuentes y hoja de estilos -->
+    <!-- Importar fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
@@ -28,6 +28,7 @@
 
 <body>
     <header class="hero" id="inicio">
+        <!-- Barra de navegación principal -->
         <nav class="navbar">
             <a href="#inicio" class="logo">🎤 Karaoke Maui</a>
             <ul class="menu">
@@ -38,12 +39,12 @@
             </ul>
         </nav>
 
+        <!-- Banner principal con call-to-action -->
         <div class="banner">
             <div class="banner-content">
                 <p class="eyebrow">Noche épica · música en vivo · energía total</p>
                 <h1 class="title-wrap">
                     <span class="title-text">Karaoke Maui</span>
-                    <!-- media luna removed -->
                 </h1>
                 <p class="banner-subtitle">Vive la música, vive la noche y deja que la pista te encuentre.</p>
                 <div class="banner-actions">
@@ -52,23 +53,23 @@
                 </div>
             </div>
 
-                <!-- removed inline karaoke.jpg image: header now uses `karaoke hd.png` as background -->
-                <div class="banner-card" aria-hidden="false">
-                    <img src="img/km%20hd.png" alt="KM logo" class="banner-logo">
-                    <div class="banner-info">
-                        <p class="card-label">Lo mejor del momento</p>
-                        <ul class="banner-features">
-                            <li>🎙️ Sonido profesional</li>
-                            <li>✨ Luces y ambiente premium</li>
-                            <li>🎉 Eventos para toda la noche</li>
-                        </ul>
-                    </div>
+            <!-- Card con info y logo del lado derecho -->
+            <div class="banner-card" aria-hidden="false">
+                <img src="img/km%20hd.png" alt="KM logo" class="banner-logo">
+                <div class="banner-info">
+                    <p class="card-label">Lo mejor del momento</p>
+                    <ul class="banner-features">
+                        <li>🎙️ Sonido profesional</li>
+                        <li>✨ Luces y ambiente premium</li>
+                        <li>🎉 Eventos para toda la noche</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Sección de highlights: por qué nos eligen -->
         <section class="destacados" id="servicios">
             <h2>Por qué la gente vuelve</h2>
             <div class="destacados-contenedor">
@@ -87,6 +88,7 @@
             </div>
         </section>
 
+        <!-- Formulario de contacto -->
         <section class="contacto" id="contacto">
             <h2>Contacto</h2>
             <p>Rellena el formulario y nos pondremos en contacto contigo para preparar tu noche.</p>
@@ -108,11 +110,13 @@
             </form>
         </section>
 
+        <!-- Sección de reservas con cards de servicios -->
         <section class="reservas" id="reservas">
             <h2>Reservas y Eventos</h2>
             <p>Organiza tu noche perfecta en Karaoke Maui. Reserva tu sala, participa en eventos o celebra con nosotros.</p>
 
             <div class="reservas-contenedor">
+                <!-- Card 1: Noches de Karaoke -->
                 <div class="reserva-card">
                     <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Personas cantando en un escenario">
                     <h3>Noches de Karaoke</h3>
@@ -120,6 +124,7 @@
                     <button>Reservar</button>
                 </div>
 
+                <!-- Card 2: Fiestas Privadas -->
                 <div class="reserva-card">
                     <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" alt="Micrófono y ambiente de fiesta">
                     <h3>Fiestas Privadas</h3>
@@ -127,6 +132,7 @@
                     <button>Consultar</button>
                 </div>
 
+                <!-- Card 3: Eventos con DJ -->
                 <div class="reserva-card">
                     <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Escenario con música y luces">
                     <h3>Eventos con DJ</h3>
@@ -137,6 +143,7 @@
         </section>
     </main>
 
+    <!-- Footer con redes sociales e info -->
     <footer>
         <div class="footer-social">
             <a href="#">📘</a>
@@ -148,15 +155,18 @@
         <p><a href="#">Aviso Legal</a></p>
     </footer>
 
+    <!-- Script para validar el formulario de contacto -->
     <script>
         const form = document.getElementById('contactoForm');
         form.addEventListener('submit', function(event) {
+            // Validar que todos los campos requeridos estén completos
             if (!form.checkValidity()) {
                 event.preventDefault();
                 alert('Por favor, completa todos los campos obligatorios correctamente.');
                 return;
             }
 
+            // Validar específicamente el teléfono
             const telefono = document.getElementById('telefono');
             if (telefono.value && !telefono.validity.valid) {
                 event.preventDefault();
