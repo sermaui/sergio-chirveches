@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -94,21 +95,51 @@
             <h2>Contacto</h2>
             <p>Rellena el formulario y nos pondremos en contacto contigo para preparar tu noche.</p>
 
-            <form id="contactoForm" action="#" method="post">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre">
+            <div class="contacto-wrapper">
+                <!-- Formulario a la izquierda -->
+                <form id="contactoForm" action="#" method="post">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre">
 
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@dominio.com">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@dominio.com">
 
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Escribe tu mensaje..."></textarea>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Escribe tu mensaje..."></textarea>
 
-                <button type="submit">Enviar</button>
-            </form>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <!-- Redes sociales a la derecha -->
+                <div class="contacto-redes">
+                    <h3>Sígueme en redes</h3>
+                    <p>También puedes contactarme directamente por aquí</p>
+                    <div class="redes-sociales">
+                        <a href="https://www.facebook.com/karaokemaui" target="_blank" rel="noopener noreferrer" class="red-link facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/karaokemaui" target="_blank" rel="noopener noreferrer" class="red-link instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://wa.me/34649919317" target="_blank" rel="noopener noreferrer" class="red-link whatsapp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                    
+                    <div class="contacto-info">
+                        <h4>Información de contacto</h4>
+                        <p><i class="fas fa-phone"></i> +34 649 919 317</p>
+                        <p><i class="fas fa-envelope"></i> contacto@karaokemaui.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Tenerife, Islas Canarias</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Las diferentes opciones que ofrezco -->
@@ -146,14 +177,42 @@
 
     <!-- Footer con mis redes y ubicación -->
     <footer>
-        <div class="footer-social">
-            <a href="#">📘</a>
-            <a href="#">📸</a>
-            <a href="#">🐦</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Karaoke Maui</h3>
+                <p>Vive la música, vive la noche y deja que la pista te encuentre.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sígueme</h3>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/karaokemaui" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/karaokemaui" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/34649919317" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <p>Karaoke Maui – Calle Falsa 123, Tenerife</p>
-        <p><a href="#">Aviso Legal</a></p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Karaoke Maui - Todos los derechos reservados</p>
+            <p><a href="#">Aviso Legal</a> | <a href="#">Política de privacidad</a></p>
+        </div>
     </footer>
 
     <!-- Validación del formulario en el cliente antes de enviar -->
