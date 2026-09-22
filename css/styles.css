@@ -1,53 +1,362 @@
-/* Karaoke Maui - hoja de estilos compartida por las cuatro páginas. */
-:root { --primary:#6a11cb; --secondary:#2575fc; --accent:#ff4ecd; --dark:#07111f; --text:#e9efff; --panel:#ffffffee; }
-* { box-sizing:border-box; }
-body { margin:0; color:var(--text); font-family:'Audiowide','Segoe UI',sans-serif; background:linear-gradient(135deg,#07111f,#132b4f 45%,#1d3d6b); line-height:1.6; }
-body::before { content:""; position:fixed; inset:0; pointer-events:none; background:radial-gradient(circle at top left,#ff4ecd40,transparent 30%); }
-h1,h2,h3,button,.navbar,.btn { font-family:'Orbitron','Audiowide',sans-serif; }
-h1,h2,h3 { line-height:1.2; }
-a { color:#cfe7ff; }
-.navbar { max-width:1200px; margin:0 auto; padding:.8rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; border:1px solid #ffffff2e; border-radius:999px; background:#ffffff1f; backdrop-filter:blur(10px); }
-.logo { color:#fff; text-decoration:none; font-weight:800; letter-spacing:.04em; }
-.menu { display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; margin:0; }
-.menu a { display:block; padding:.55rem .9rem; border-radius:999px; color:#fff; text-decoration:none; transition:background .2s,color .2s; }
-.menu a:hover,.menu a.activo { background:#fff; color:var(--dark); }
-.hero { min-height:78vh; padding:1.2rem 1rem 4rem; background:linear-gradient(#07111f70,#07111f70),url('../img/karaoke%20hd%20horizontal.png') center/cover; box-shadow:0 10px 40px #0003; }
-.banner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.5fr .9fr; gap:2rem; align-items:center; padding:8rem 1rem 2rem; }
-.banner h1 { margin:.5rem 0; font-size:clamp(2.8rem,7vw,5.5rem); }
-.banner-subtitle { max-width:620px; font-size:1.15rem; }
-.eyebrow { display:inline-block; margin:0 0 .7rem; padding:.35rem .75rem; border-radius:999px; background:#ffffff2e; font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; }
-.banner-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.4rem; }
-.btn { display:inline-block; border:0; padding:.8rem 1.2rem; border-radius:999px; color:#fff; font-weight:700; text-decoration:none; cursor:pointer; transition:transform .2s,box-shadow .2s; }
-.btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px #2575fc44; }
-.btn-primary { background:linear-gradient(90deg,var(--accent),#ff7a3d); }
-.btn-secondary { background:#ffffff2b; border:1px solid #ffffff47; }
-.banner-card { display:flex; align-items:flex-start; gap:1rem; padding:1rem; border:1px solid #ffffff2e; border-radius:1rem; background:#07111f55; backdrop-filter:blur(6px); }
-.banner-logo { width:170px; max-width:40%; border-radius:12px; }
-.banner-card ul { margin:0; padding-left:1.1rem; }
-.card-label { margin:0 0 .4rem; font-weight:700; text-transform:uppercase; font-size:.85rem; }
-.page-header { padding:1.2rem 1rem 3.5rem; background:linear-gradient(135deg,#07111ff5,#2575fccc),url('../img/karaoke%20hd%20horizontal.png') center/cover; }
-.page-title { max-width:1100px; margin:0 auto; padding:4rem 1rem 0; }
-.page-title h1 { margin:.4rem 0 .8rem; font-size:clamp(2.2rem,5vw,4rem); }
-.page-main { max-width:1200px; margin:2rem auto; padding:0 1rem; }
-.panel { padding:2rem; border-radius:1.4rem; background:var(--panel); color:var(--dark); box-shadow:0 16px 40px #0003; }
-.panel h2 { margin-top:0; color:#102243; }
-.feature-grid,.gallery-grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-.feature-grid article,.gallery-card { padding:1.2rem; border:1px solid #dfe8ff; border-radius:1rem; background:linear-gradient(135deg,#f8f8ff,#eef4ff); }
-.feature-grid h3,.gallery-card h3 { margin-top:0; color:#1b3b78; }
-.gallery-card { overflow:hidden; padding:0; }
-.gallery-card img { display:block; width:100%; height:190px; object-fit:cover; }
-.gallery-card div { padding:1.2rem; }
-form { display:grid; gap:.7rem; }
-label { font-weight:600; }
-input,textarea,select { width:100%; padding:.85rem 1rem; border:1px solid #d6def7; border-radius:.8rem; font:inherit; background:#f7faff; }
-textarea { min-height:130px; resize:vertical; }
-input:focus,textarea:focus,select:focus { outline:3px solid #2575fc26; border-color:var(--secondary); }
-.check-label { display:flex; align-items:flex-start; gap:.6rem; margin:.4rem 0; font-weight:400; }
-.check-label input { width:auto; margin-top:.35rem; }
-.form-panel { max-width:760px; margin:0 auto; }
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
-.contact-info { color:#555; }
-.contact-info h3 { color:#1b3b78; }
-.map { width:100%; min-height:260px; border:0; border-radius:.8rem; margin-top:1rem; }
-footer { padding:2rem 1rem 3rem; text-align:center; color:#fff; }
-@media (max-width:760px) { .navbar { align-items:flex-start; flex-direction:column; border-radius:1rem; } .hero { min-height:auto; } .banner { grid-template-columns:1fr; padding-top:4rem; } .banner-card { flex-direction:column; } .banner-logo { max-width:180px; } .panel { padding:1.3rem; } .contact-grid { grid-template-columns:1fr; } }
+/*
+    Karaoke Maui - hoja de estilos compartida por las cuatro páginas.
+    Aquí se define la identidad visual del sitio, el layout responsive y los estilos
+    principales de navegación, banner, formularios y galería.
+*/
+:root {
+    --primary: #6a11cb;
+    --secondary: #2575fc;
+    --accent: #ff4ecd;
+    --dark: #07111f;
+    --text: #e9efff;
+    --panel: #ffffffee;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: 'Audiowide', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #07111f, #132b4f 45%, #1d3d6b);
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at top left, #ff4ecd40, transparent 30%);
+}
+
+h1, h2, h3, button, .navbar, .btn {
+    font-family: 'Orbitron', 'Audiowide', sans-serif;
+}
+
+h1, h2, h3 { line-height: 1.2; }
+a { color: #cfe7ff; }
+
+/* Menú principal con estilo glassmorphism para todas las páginas */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid #ffffff2e;
+    border-radius: 999px;
+    background: #ffffff1f;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover, .menu a.activo {
+    background: #fff;
+    color: var(--dark);
+}
+
+/* Hero de la página principal con fotografía amplia y mensaje de marca */
+.hero {
+    min-height: 78vh;
+    padding: 1.2rem 1rem 4rem;
+    background: linear-gradient(#07111f70, #07111f70), url('../img/karaoke%20hd%20horizontal.png') center/cover;
+    box-shadow: 0 10px 40px #0003;
+}
+
+.banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 8rem 1rem 2rem;
+}
+
+.banner h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+.banner-subtitle {
+    max-width: 620px;
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 0.7rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #ffffff2e;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #2575fc44;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), #ff7a3d);
+}
+
+.btn-secondary {
+    background: #ffffff2b;
+    border: 1px solid #ffffff47;
+}
+
+.banner-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ffffff2e;
+    border-radius: 1rem;
+    background: #07111f55;
+    backdrop-filter: blur(6px);
+}
+
+.banner-logo {
+    width: 170px;
+    max-width: 40%;
+    border-radius: 12px;
+}
+
+.banner-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.card-label {
+    margin: 0 0 0.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Cabeceras internas de páginas secundarias */
+.page-header {
+    padding: 1.2rem 1rem 3.5rem;
+    background: linear-gradient(135deg, #07111ff5, #2575fccc), url('../img/karaoke%20hd%20horizontal.png') center/cover;
+}
+
+.page-title {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1rem 0;
+}
+
+.page-title h1 {
+    margin: 0.4rem 0 0.8rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.page-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Paneles reutilizados para contenido principal */
+.panel {
+    padding: 2rem;
+    border-radius: 1.4rem;
+    background: var(--panel);
+    color: var(--dark);
+    box-shadow: 0 16px 40px #0003;
+}
+
+.panel h2 {
+    margin-top: 0;
+    color: #102243;
+}
+
+.feature-grid, .gallery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature-grid article, .gallery-card {
+    padding: 1.2rem;
+    border: 1px solid #dfe8ff;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #f8f8ff, #eef4ff);
+}
+
+.feature-grid h3, .gallery-card h3 {
+    margin-top: 0;
+    color: #1b3b78;
+}
+
+.gallery-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.gallery-card div {
+    padding: 1.2rem;
+}
+
+/* Formularios con validación visual y ancho correcto */
+form {
+    display: grid;
+    gap: 0.7rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #d6def7;
+    border-radius: 0.8rem;
+    font: inherit;
+    background: #f7faff;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 3px solid #2575fc26;
+    border-color: var(--secondary);
+}
+
+.check-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin: 0.4rem 0;
+    font-weight: 400;
+}
+
+.check-label input {
+    width: auto;
+    margin-top: 0.35rem;
+}
+
+.form-panel {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-info {
+    color: #555;
+}
+
+.contact-info h3 {
+    color: #1b3b78;
+}
+
+.map {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+}
+
+footer {
+    padding: 2rem 1rem 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        border-radius: 1rem;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+    }
+
+    .banner-card {
+        flex-direction: column;
+    }
+
+    .banner-logo {
+        max-width: 180px;
+    }
+
+    .panel {
+        padding: 1.3rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
