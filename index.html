@@ -3,61 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Esto va en la pestaña del navegador -->
-    <title>Karaoke Maui — Noche épica y sonido profesional</title>
-
-    <!-- Metadatos para SEO, que la gente me encuentre cuando busque -->
-    <meta name="author" content="Sergio Mauricio Chirveches">
-    <meta name="description" content="Karaoke Maui: Vive la música, vive la noche y deja que la pista te encuentre. Eventos, fiestas privadas y sonido profesional en Tenerife. Proyecto por Sergio Mau[...]
-
-    <!-- Open Graph para cuando compartan en WhatsApp, Facebook, etc -->
-    <meta property="og:site_name" content="Karaoke Maui">
-    <meta property="og:title" content="Karaoke Maui · Proyecto de Sergio Mauricio Chirveches">
-    <meta property="og:description" content="Noche épica, música en vivo y energía total. Descubre la mejor experiencia de karaoke con sonido profesional y ambiente premium.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.karaokemaui.com">
-    <meta property="og:image" content="img/km%20hd.png">
-
-    <!-- Traigo las fuentes de Google Fonts y mi CSS -->
+    <meta name="description" content="Karaoke Maui: música, fiestas y eventos con sonido profesional en Tenerife.">
+    <title>Karaoke Maui — Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header class="hero" id="inicio">
-        <!-- La barra de nav que siempre está ahí -->
-        <nav class="navbar">
-            <a href="#inicio" class="logo">🎤 Karaoke Maui</a>
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="index.html" class="logo">🎤 Karaoke Maui</a>
             <ul class="menu">
-                <li><a href="#inicio" class="activo">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
-        <!-- El banner principal con lo que quiero que vean primero -->
         <div class="banner">
             <div class="banner-content">
                 <p class="eyebrow">Noche épica · música en vivo · energía total</p>
-                <h1 class="title-wrap">
-                    <span class="title-text">Karaoke Maui</span>
-                </h1>
+                <h1 class="title-wrap"><span class="title-text">Karaoke Maui</span></h1>
                 <p class="banner-subtitle">Vive la música, vive la noche y deja que la pista te encuentre.</p>
                 <div class="banner-actions">
-                    <!-- Dos botones para que la gente pueda reservar o contactarme -->
-                    <a href="#reservas" class="btn btn-primary">Reservar ahora</a>
-                    <a href="#contacto" class="btn btn-secondary">Hablar con nosotros</a>
+                    <a href="presupuesto.html" class="btn btn-primary">Pedir presupuesto</a>
+                    <a href="contacto.html" class="btn btn-secondary">Hablar con nosotros</a>
                 </div>
             </div>
-
-            <!-- Una tarjeta con el logo y lo que me destaca -->
-            <div class="banner-card" aria-hidden="false">
-                <img src="img/km%20hd.png" alt="KM logo" class="banner-logo">
+            <div class="banner-card" aria-label="Ventajas de Karaoke Maui">
+                <img src="img/km%20hd.png" alt="Logotipo de Karaoke Maui" class="banner-logo">
                 <div class="banner-info">
                     <p class="card-label">Lo mejor del momento</p>
                     <ul class="banner-features">
@@ -69,175 +45,16 @@
             </div>
         </div>
     </header>
-
-    <main>
-        <!-- Aquí muestro por qué la gente me elige -->
-        <section class="destacados" id="servicios">
+    <main class="page-main">
+        <section class="destacados">
             <h2>Por qué la gente vuelve</h2>
             <div class="destacados-contenedor">
-                <article>
-                    <h3>Experiencia inmersiva</h3>
-                    <p>Micrófonos top, efectos de sonido y un ambiente que te hace sentir en el escenario.</p>
-                </article>
-                <article>
-                    <h3>Eventos inolvidables</h3>
-                    <p>Fiestas privadas, noches temáticas y reservas pensadas para que todo salga perfecto.</p>
-                </article>
-                <article>
-                    <h3>Estilo único</h3>
-                    <p>Una mezcla de energía urbana, creatividad y buen rollo en cada detalle.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Formulario para que me contacten, necesito recoger sus datos -->
-        <section class="contacto" id="contacto">
-            <h2>Contacto</h2>
-            <p>Rellena el formulario y nos pondremos en contacto contigo para preparar tu noche.</p>
-
-            <div class="contacto-wrapper">
-                <!-- Formulario a la izquierda -->
-                <form id="contactoForm" action="#" method="post">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre">
-
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@dominio.com">
-
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
-
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Escribe tu mensaje..."></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-
-                <!-- Redes sociales a la derecha -->
-                <div class="contacto-redes">
-                    <h3>Sígueme en redes</h3>
-                    <p>También puedes contactarme directamente por aquí</p>
-                    <div class="redes-sociales">
-                        <a href="https://www.facebook.com/karaokemaui" target="_blank" rel="noopener noreferrer" class="red-link facebook" title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://www.instagram.com/karaokemaui" target="_blank" rel="noopener noreferrer" class="red-link instagram" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="https://wa.me/34649919317" target="_blank" rel="noopener noreferrer" class="red-link whatsapp" title="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp</span>
-                        </a>
-                    </div>
-                    
-                    <div class="contacto-info">
-                        <h4>Información de contacto</h4>
-                        <p><i class="fas fa-phone"></i> +34 649 919 317</p>
-                        <p><i class="fas fa-envelope"></i> contacto@karaokemaui.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Tenerife, Islas Canarias</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Las diferentes opciones que ofrezco -->
-        <section class="reservas" id="reservas">
-            <h2>Reservas y Eventos</h2>
-            <p>Organiza tu noche perfecta en Karaoke Maui. Reserva tu sala, participa en eventos o celebra con nosotros.</p>
-
-            <div class="reservas-contenedor">
-                <!-- Opción 1: Noches normales de karaoke -->
-                <div class="reserva-card">
-                    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Personas cantando en un escenario">
-                    <h3>Noches de Karaoke</h3>
-                    <p>Vive la experiencia con micrófonos profesionales, sonido envolvente y ambiente tecnológico.</p>
-                    <button>Reservar</button>
-                </div>
-
-                <!-- Opción 2: Para fiestas con amigos o familiares -->
-                <div class="reserva-card">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" alt="Micrófono y ambiente de fiesta">
-                    <h3>Fiestas Privadas</h3>
-                    <p>Ideal para cumpleaños, despedidas o reuniones especiales. Luces, música y diversión asegurada.</p>
-                    <button>Consultar</button>
-                </div>
-
-                <!-- Opción 3: Con DJ en vivo, lo más profesional -->
-                <div class="reserva-card">
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Escenario con música y luces">
-                    <h3>Eventos con DJ</h3>
-                    <p>Ambiente urbano con mezclas en vivo, efectos digitales y sonido profesional.</p>
-                    <button>Más info</button>
-                </div>
+                <article><h3>Experiencia inmersiva</h3><p>Micrófonos top, efectos de sonido y un ambiente que te hace sentir en el escenario.</p></article>
+                <article><h3>Eventos inolvidables</h3><p>Fiestas privadas, noches temáticas y reservas pensadas para que todo salga perfecto.</p></article>
+                <article><h3>Estilo único</h3><p>Una mezcla de energía urbana, creatividad y buen rollo en cada detalle.</p></article>
             </div>
         </section>
     </main>
-
-    <!-- Footer con mis redes y ubicación -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Karaoke Maui</h3>
-                <p>Vive la música, vive la noche y deja que la pista te encuentre.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#reservas">Reservas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Sígueme</h3>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/karaokemaui" target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/karaokemaui" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/34649919317" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Karaoke Maui - Todos los derechos reservados</p>
-            <p><a href="#">Aviso Legal</a> | <a href="#">Política de privacidad</a></p>
-        </div>
-    </footer>
-
-    <!-- Validación del formulario en el cliente antes de enviar -->
-    <script>
-        const form = document.getElementById('contactoForm');
-        form.addEventListener('submit', function(event) {
-            // Primero verifico que todo esté relleno correctamente
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                alert('Por favor, completa todos los campos obligatorios correctamente.');
-                return;
-            }
-
-            // Chequeo específico del teléfono porque es importante que sea válido
-            const telefono = document.getElementById('telefono');
-            if (telefono.value && !telefono.validity.valid) {
-                event.preventDefault();
-                alert('El teléfono debe tener 9 dígitos numéricos.');
-                telefono.focus();
-                return;
-            }
-
-            alert('Formulario enviado correctamente.');
-            event.preventDefault();
-        });
-    </script>
+    <footer><p>© 2024 Karaoke Maui · Tenerife</p></footer>
 </body>
 </html>
