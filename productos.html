@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karaoke Maui — Productos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Productos y servicios de Karaoke Maui.">
+    <title>Karaoke Maui | Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="page-header">
         <nav class="navbar" aria-label="Navegación principal">
-            <a href="index.html" class="logo">🎤 Karaoke Maui</a>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html" class="activo" aria-current="page">Productos</a></li>
-                <li><a href="presupuesto.html">Presupuesto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <a class="logo" href="index.html">🎤 Karaoke Maui</a>
+            <ul class="menu"><li><a href="index.html">Inicio</a></li><li><a class="activo" aria-current="page" href="productos.html">Productos</a></li><li><a href="presupuesto.html">Presupuesto</a></li><li><a href="contacto.html">Contacto</a></li></ul>
         </nav>
-        <div class="page-title"><p class="eyebrow">Servicios para cada ocasión</p><h1>Productos y servicios</h1><p>Todo lo que necesitas para convertir tu celebración en una experiencia inolvidable.</p></div>
+        <div class="page-title"><p class="eyebrow">Servicios para cada ocasión</p><h1>Productos y servicios</h1><p>Elige la experiencia que mejor encaja con tu celebración.</p></div>
     </header>
     <main class="page-main">
-        <section class="reservas">
-            <h2>Elige tu experiencia</h2>
-            <div class="reservas-contenedor">
-                <article class="reserva-card"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Personas cantando en un escenario"><h3>Noches de Karaoke</h3><p>Micrófonos profesionales, sonido envolvente y repertorio para cantar sin parar.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></article>
-                <article class="reserva-card"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" alt="Micrófono y ambiente de fiesta"><h3>Fiestas privadas</h3><p>La combinación perfecta de luces, música y diversión para cumpleaños y celebraciones.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></article>
-                <article class="reserva-card"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Escenario con música y luces"><h3>Eventos con DJ</h3><p>Mezclas en vivo, efectos digitales y sonido profesional para una noche con estilo.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></article>
+        <!-- Galería de productos presentada en una cuadrícula responsive -->
+        <section class="panel">
+            <h2>Galería de experiencias</h2>
+            <div class="gallery-grid">
+                <article class="gallery-card"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Personas cantando en un escenario"><div><h3>Noches de karaoke</h3><p>Micrófonos profesionales, sonido envolvente y repertorio para cantar sin parar.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></div></article>
+                <article class="gallery-card"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" alt="Micrófono en un ambiente de fiesta"><div><h3>Fiestas privadas</h3><p>Luces, música y diversión para cumpleaños y celebraciones especiales.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></div></article>
+                <article class="gallery-card"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Escenario con música y luces"><div><h3>Eventos con DJ</h3><p>Mezclas en vivo, efectos digitales y sonido profesional con estilo.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></div></article>
+                <article class="gallery-card"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80" alt="Público disfrutando de un concierto"><div><h3>Eventos corporativos</h3><p>Una propuesta musical diferente para equipos y celebraciones de empresa.</p><a class="btn btn-primary" href="presupuesto.html">Solicitar</a></div></article>
             </div>
         </section>
     </main>

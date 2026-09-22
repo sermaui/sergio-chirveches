@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Karaoke Maui: música, fiestas y eventos con sonido profesional en Tenerife.">
-    <title>Karaoke Maui — Inicio</title>
+    <title>Karaoke Maui | Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="hero" id="inicio">
+    <header class="hero">
+        <!-- Menú común de las cuatro páginas -->
         <nav class="navbar" aria-label="Navegación principal">
-            <a href="index.html" class="logo">🎤 Karaoke Maui</a>
+            <a class="logo" href="index.html">🎤 Karaoke Maui</a>
             <ul class="menu">
-                <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                <li><a class="activo" aria-current="page" href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="presupuesto.html">Presupuesto</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -25,33 +25,26 @@
         <div class="banner">
             <div class="banner-content">
                 <p class="eyebrow">Noche épica · música en vivo · energía total</p>
-                <h1 class="title-wrap"><span class="title-text">Karaoke Maui</span></h1>
+                <h1>Karaoke Maui</h1>
                 <p class="banner-subtitle">Vive la música, vive la noche y deja que la pista te encuentre.</p>
                 <div class="banner-actions">
-                    <a href="presupuesto.html" class="btn btn-primary">Pedir presupuesto</a>
-                    <a href="contacto.html" class="btn btn-secondary">Hablar con nosotros</a>
+                    <a class="btn btn-primary" href="presupuesto.html">Pedir presupuesto</a>
+                    <a class="btn btn-secondary" href="contacto.html">Hablar con nosotros</a>
                 </div>
             </div>
-            <div class="banner-card" aria-label="Ventajas de Karaoke Maui">
-                <img src="img/km%20hd.png" alt="Logotipo de Karaoke Maui" class="banner-logo">
-                <div class="banner-info">
-                    <p class="card-label">Lo mejor del momento</p>
-                    <ul class="banner-features">
-                        <li>🎙️ Sonido profesional</li>
-                        <li>✨ Luces y ambiente premium</li>
-                        <li>🎉 Eventos para toda la noche</li>
-                    </ul>
-                </div>
+            <div class="banner-card">
+                <img class="banner-logo" src="img/km%20hd.png" alt="Logotipo de Karaoke Maui">
+                <div><p class="card-label">Lo mejor del momento</p><ul><li>🎙️ Sonido profesional</li><li>✨ Luces premium</li><li>🎉 Eventos completos</li></ul></div>
             </div>
         </div>
     </header>
     <main class="page-main">
-        <section class="destacados">
+        <section class="panel">
             <h2>Por qué la gente vuelve</h2>
-            <div class="destacados-contenedor">
-                <article><h3>Experiencia inmersiva</h3><p>Micrófonos top, efectos de sonido y un ambiente que te hace sentir en el escenario.</p></article>
-                <article><h3>Eventos inolvidables</h3><p>Fiestas privadas, noches temáticas y reservas pensadas para que todo salga perfecto.</p></article>
-                <article><h3>Estilo único</h3><p>Una mezcla de energía urbana, creatividad y buen rollo en cada detalle.</p></article>
+            <div class="feature-grid">
+                <article><h3>Experiencia inmersiva</h3><p>Micrófonos profesionales, efectos de sonido y un ambiente de escenario.</p></article>
+                <article><h3>Eventos inolvidables</h3><p>Fiestas privadas y noches temáticas preparadas para que todo salga perfecto.</p></article>
+                <article><h3>Estilo único</h3><p>Energía urbana, creatividad y buen rollo en cada detalle.</p></article>
             </div>
         </section>
     </main>
